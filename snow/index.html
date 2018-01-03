@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Snow</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>Snow</h1>
+
+	<p>Using force vector field generated with Perlin noise to move particles like in wind.</p>
+
+	<canvas width="800" height="500"></canvas>
+
+	<div>
+		<label>
+			<input type="checkbox" name="visualiseField" autofocus> show field
+		</label>
+		<label>
+			<input type="range" name="fieldScale" autofocus> fieldScale
+		</label>
+		<label>
+			<input type="range" name="noiseScale" autofocus> noiseScale
+		</label>
+	</div>
+
+	<!-- 
+	TODOs:
+
+	- [ ] Maybe render the field into an image on fieldScale change, and then only draw that when necessary
+	- [ ] Field visualisation could be done in a worker to parallelise it?
+	- [ ] Show the vectors better
+
+	-->
+
+	<script src="noise.js" type="module"></script>
+	<script src="main.js" type="module"></script>
+</body>
+</html>
